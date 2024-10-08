@@ -1,0 +1,22 @@
+#ifndef ANAL_LEXICO_ERRORES_H
+#define ANAL_LEXICO_ERRORES_H
+
+#endif //ANAL_LEXICO_ERRORES_H
+
+void ERROR_ABRIR_ARCHIVO();
+
+void ERROR_LEXEMA_EN_BUFFER();
+
+void ERROR_CARACTER_NO_RECONOCIDO(int linea);
+
+void ERROR_NUMERO_BINARIO(int linea);
+
+void ERROR_NUMERO_OCTAL(int linea);
+
+void ERROR_NUMERO_HEXADECIMAL(int linea);
+
+void ERROR_NUMERO_FLOTANTE(int linea);
+
+void ERROR_VARIABLE_NO_ASIGNADA(char* lexema);
+
+void ERROR_FUNCION_INCORRECTA(char* lexema);
