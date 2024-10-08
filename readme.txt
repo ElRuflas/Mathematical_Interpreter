@@ -1,39 +1,87 @@
+# Intérprete Matemático
+
+Este proyecto es un intérprete matemático escrito en C, capaz de evaluar expresiones matemáticas, incluidas funciones de la librería estándar `math.h`. Además, el intérprete cuenta con varios comandos que permiten modificar su comportamiento y cargar archivos de expresiones.
+
 ## Requisitos
 
-- Flex (para generar el analizador léxico)
-- GCC (para compilar el código)
-- Bison
+- **Flex** (para generar el analizador léxico)
+- **Bison** (para generar el analizador sintáctico)
+- **GCC** (para compilar el código)
 
 ## Compilación y Ejecución
 
-1. Clona o descarga este repositorio en tu máquina.
+1. Clona o descarga este repositorio en tu máquina:
+
+   ```bash
+   git clone https://github.com/usuario/repo.git
+   cd repo
+   ```
 
 2. Abre una terminal y navega hasta el directorio donde se encuentra el código fuente.
 
-3. Para compilar el programa el programa, simplemente ejecuta el comando (da permisos si es necesario con chmod):
+3. Para compilar el programa, ejecuta el siguiente comando (si es necesario, da permisos con `chmod`):
 
-make
+   ```bash
+   make
+   ```
 
-4.Para ejecutar:
+4. Para ejecutar el programa:
 
-./ejecutable
+   ```bash
+   ./ejecutable
+   ```
 
-5. Para limpiar los archivos generados por la compilación, utiliza el comando:
+5. Para limpiar los archivos generados durante la compilación, utiliza:
 
-make clean
+   ```bash
+   make clean
+   ```
 
+## Funcionamiento
 
-FUNCIONAMIENTO:
-El codigo es un interprete matemático capaz de calcular expresiones matemáticas, además puede utilizar funciones matemáticas de la librería math.h de c.
-Para ejecutar expresiones, comandos o funciones es importante que la línea acabe en ';' para que no de error de sintaxis.
-El código cuenta con una serie de comandos que afectan al comportamiento del interprete, para saber mas ejecutar el programa y teclear: help; . Con esto saldrá toda la información del intérprete.
-El interprete muestra en cada linea el resultado del cálculo, es decir, si se pone 4+2; se mostrará 6, sin embargo en las asignaciones no se muestra el valor. Es decir x = 4; no muestra nada.
-Para ver el valor de una variable escribir el nombre de la variable seguido de ';'. Ejemplo:  x;
+El intérprete permite evaluar expresiones matemáticas y utilizar funciones de la librería `math.h` de C. Para ejecutar expresiones, comandos o funciones, es importante que la línea termine con un `;` para evitar errores de sintaxis.
 
-Nota: 
-Para la función load (carga un archivo), primero escribir el comanado con ';' -> load;
-Luego pedirá un archivo. Escribir el nombre del archivo sin ';'.
-Ejemplo:
-load;
-archivo.txt
+- El intérprete muestra el resultado de los cálculos en cada línea. Por ejemplo, si introduces `4 + 2;`, se mostrará `6`.
+- En las asignaciones de variables, no se muestra el valor. Por ejemplo, `x = 4;` no mostrará nada.
+- Para ver el valor de una variable, simplemente escribe el nombre de la variable seguido de `;`. Ejemplo:
+
+   ```bash
+   x;
+   ```
+
+### Comandos
+
+El intérprete cuenta con una serie de comandos que afectan su comportamiento. Para obtener más información sobre los comandos disponibles, puedes ejecutar el programa y escribir:
+
+```bash
+help;
+```
+
+Esto mostrará toda la información necesaria para utilizar el intérprete correctamente.
+
+### Nota sobre el Comando `load`
+
+El comando `load` permite cargar un archivo que contiene expresiones para ser evaluadas por el intérprete. Para usar este comando:
+
+1. Escribe el comando seguido de `;`:
+
+   ```bash
+   load;
+   ```
+
+2. Luego, el intérprete te pedirá el nombre del archivo (sin `;` al final):
+
+   ```bash
+   archivo.txt
+   ```
+
+## Ejemplo de Uso
+
+```bash
+> 4 + 2;
+6
+> x = 10;
+> x;
+10
+```
 
